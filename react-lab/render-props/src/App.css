@@ -6,6 +6,30 @@ body {
   text-align: center;
 }
 
+.container {
+  width: 80vw;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.component {
+  border: 1px solid cornflowerblue;
+  box-shadow: 1px 1px 1px slateblue;
+  padding: 0 1rem 1rem;
+  border-radius: 1rem;
+}
+
+.component.class {
+  background-color: thistle;
+}
+
+.component.functional {
+  background-color: lightblue;
+}
+
 .App {
   text-align: center;
 }

@@ -1,7 +1,5 @@
 import './App.css';
 import React, { useState } from 'react';
-import Switch from "@material-ui/core/Switch";
-import Container from "@material-ui/core/Container";
 import FunctionalComponent from "./FunctionalComponent";
 import ClassComponent from './ClassComponent';
 
@@ -12,19 +10,21 @@ function App() {
     setDisplayClassComponent((prevState => !prevState))
   }
   return (
-    <Container>
-      <p>Toggle Components</p>
-      <Switch
-        checked={displayClassComponent}
-        onChange={toggleDisplay}
-        color="primary"
-        inputProps={{ "aria-label": "primary checkbox" }}
-      />
-      <Container>
+    <div className="container">
+      <div className="checkbox">
+        <p>Display Class Component</p>
+        <input 
+          type="checkbox"
+          checked={displayClassComponent}
+          onChange={toggleDisplay}
+          inputProps={{ "aria-label": "primary checkbox" }}
+        />
+      </div>
+      <div>
         {displayClassComponent && <ClassComponent />}
         {!displayClassComponent && <FunctionalComponent />}
-      </Container>
-    </Container>
+      </div>
+    </div>
   );
 }
 
