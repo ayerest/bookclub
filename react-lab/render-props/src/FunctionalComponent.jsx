@@ -32,7 +32,7 @@ const FunctionalComponent = ({ thisThing, thisOtherThing }) => {
   return (
     <div className="component functional">
       <h2>Functional Component</h2>
-      <p>Window width: {windowWidth}</p>
+      <p className="windowWidth">Window width: {windowWidth}</p>
       <div className="inputHolder">
         <input
           type="text"

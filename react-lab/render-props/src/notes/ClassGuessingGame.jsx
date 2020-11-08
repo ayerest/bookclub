@@ -5,6 +5,7 @@ class ClassGuessingGame extends Component {
     super(props);
     this.state = {
       guessInput: "Guess",
+      // STEP 1: remove windowWidth from state
       // windowWidth: window.innerWidth,
       previousGuesses: [],
     };
@@ -13,6 +14,7 @@ class ClassGuessingGame extends Component {
   componentDidMount() {
     console.log("Component did mount");
     document.title = this.state.guessInput;
+    // STEP 2a: remove event listener
     // window.addEventListener("resize", this.handleResize);
   }
 
@@ -23,6 +25,7 @@ class ClassGuessingGame extends Component {
 
   componentWillUnmount() {
     console.log("Component will unmount");
+    // STEP 2b: remove event listener
     // window.removeEventListener("resize", this.handleResize);
   }
 
@@ -41,7 +44,8 @@ class ClassGuessingGame extends Component {
     return (
       <div className="component class">
         <h2>Class Component</h2>
-        <p>Window width: {this.props.windowWidth.windowWidth}</p>
+        {/* STEP 3: this.props instead of this.state */}
+        <p className="windowWidth">Window width: {this.props.windowWidth.windowWidth}</p>
         <div className="inputHolder">
           <input
             type="text"
