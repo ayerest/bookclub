@@ -17,7 +17,6 @@ function App() {
           type="checkbox"
           checked={displayClassComponent}
           onChange={toggleDisplay}
-          inputProps={{ "aria-label": "primary checkbox" }}
         />
       </div>
       <div>
