@@ -1,7 +1,7 @@
 import './App.css';
 import React, { useState } from 'react';
 import FunctionalComponent from "./FunctionalComponent";
-import ClassComponent from './ClassComponent';
+import ClassComponent from './render-props/ClassComponent';
 
 function App() {
   const [displayClassComponent, setDisplayClassComponent] = useState(true);

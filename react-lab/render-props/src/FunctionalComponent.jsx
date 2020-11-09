@@ -14,14 +14,12 @@ const FunctionalComponent = () => {
     <div className="component functional">
       <h2>Functional Component</h2>
       <p className="windowWidth">Window width: {windowWidth}</p>
-      <div className="inputHolder">
-        <input
-          type="text"
-          label="Guess the phrase"
-          onChange={guessInputChangeHandler}
-          value={guessInput}
-        />
-      </div>
+      <input
+        type="text"
+        label="Guess the phrase"
+        onChange={guessInputChangeHandler}
+        value={guessInput}
+      />
     </div>
   );
 };

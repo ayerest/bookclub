@@ -38,15 +38,13 @@ class ClassComponent extends Component {
       <div className="component class">
         <h2>Class Component</h2>
         <p className="windowWidth">Window width: {this.state.windowWidth}</p>
-        <div className="inputInfo">
-          <input
-            type="text"
-            id="filled-basic"
-            label="Guess the phrase"
-            onChange={this.guessInputChangeHandler}
-            value={this.state.guessInput}
-          />
-        </div>
+        <input
+          type="text"
+          id="filled-basic"
+          label="Guess the phrase"
+          onChange={this.guessInputChangeHandler}
+          value={this.state.guessInput}
+        />
       </div>
     );
   }
