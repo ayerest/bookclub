@@ -1,24 +1,9 @@
 import React, { useState, useEffect } from "react";
-
-const useCustomHook = () => {
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-    const handleResize = () => {
-    setWindowWidth(window.innerWidth);
-  }
-   useEffect(() => {
-    console.log("window width");
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    }
-  }, [windowWidth]);
-  return windowWidth;
-}
+import useWindowWidth from './hooks/useWindowWidth';
 
 const FunctionalComponent = ({ thisThing, thisOtherThing }) => {
   const [guessInput, setGuessInput] = useState('');
-  const windowWidth = useCustomHook();
+  const windowWidth = useWindowWidth();
 
   useEffect(() => {
     console.log("document title update");

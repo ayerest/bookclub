@@ -25,6 +25,10 @@ class ClassComponent extends Component {
     window.removeEventListener("resize", this.handleResize);
   }
 
+  handleResize = () => {
+    this.setState({ windowWidth: window.innerWidth });
+  };
+
   guessInputChangeHandler = (e) => {
     this.setState({ guessInput: e.target.value });
   };

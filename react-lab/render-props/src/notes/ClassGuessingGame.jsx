@@ -7,7 +7,6 @@ class ClassGuessingGame extends Component {
       guessInput: "Guess",
       // STEP 1: remove windowWidth from state
       // windowWidth: window.innerWidth,
-      previousGuesses: [],
     };
   }
   
@@ -31,13 +30,6 @@ class ClassGuessingGame extends Component {
 
   guessInputChangeHandler = (e) => {
     this.setState({ guessInput: e.target.value });
-  };
-
-  guessSubmitHandler = () => {
-    this.setState((state, props) => ({
-      previousGuesses: [...state.previousGuesses, state.guessInput],
-      guessInput: "",
-    }));
   };
 
   render() {
