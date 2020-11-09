@@ -1,7 +1,8 @@
 import './App.css';
 import React, { useState } from 'react';
 import FunctionalComponent from "./FunctionalComponent";
-import ClassComponent from './render-props/ClassComponent';
+import ClassComponent from './ClassComponent';
+// import RenderProps from './render-props/RenderProps';
 
 function App() {
   const [displayClassComponent, setDisplayClassComponent] = useState(true);
@@ -20,6 +21,7 @@ function App() {
         />
       </div>
       <div>
+        {/* {displayClassComponent && <RenderProps />} */}
         {displayClassComponent && <ClassComponent />}
         {!displayClassComponent && <FunctionalComponent />}
       </div>

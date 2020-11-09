@@ -1,24 +1,18 @@
 import React, { Component } from "react";
-import ClassGuessingGame from "./ClassGuessingGame";
-import DocTitle from "./DocTitle";
-import WindowResize from "./WindowResize";
 
 class ClassComponent extends Component {
   render() {
     return (
-      <DocTitle>
-        {
-          (docTitle) => (
-            <WindowResize>
-              {
-                (windowResize) => (
-                  <ClassGuessingGame windowResize={windowResize} docTitle={docTitle}/>
-                )
-              }
-            </WindowResize>
-          )
-        }
-      </DocTitle>
+      <div className="component class">
+        <h2>Class Component</h2>
+        <p className="windowWidth">Window width: {this.props.windowResize.windowWidth}</p>
+        <input
+          type="text"
+          label="Guess the phrase"
+          onChange={this.props.docTitle.guessInputChangeHandler}
+          value={this.props.docTitle.guessInput}
+        />
+    </div>
     );
   }
 }

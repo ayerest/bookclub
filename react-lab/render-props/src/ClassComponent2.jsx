@@ -1,32 +1,20 @@
 import React, { Component } from "react";
+// import withWindowResize from './withWindowResize';
 
 class ClassComponent extends Component {
   constructor(props) {
     super(props);
     this.state = {
       guessInput: "Guess",
-      windowWidth: window.innerWidth,
     };
   }
   
-  handleResize = () => {
-    this.setState({ windowWidth: window.innerWidth });
-  };
-
   componentDidMount() {
-    console.log("Component did mount");
     document.title = this.state.guessInput;
-    window.addEventListener("resize", this.handleResize);
   }
 
   componentDidUpdate() {
-    console.log("Component did update");
     document.title = this.state.guessInput;
-  }
-
-  componentWillUnmount() {
-    console.log("Component will unmount");
-    window.removeEventListener("resize", this.handleResize);
   }
 
   guessInputChangeHandler = (e) => {
@@ -37,7 +25,7 @@ class ClassComponent extends Component {
     return (
       <div className="component class">
         <h2>Class Component</h2>
-        <p className="windowWidth">Window width: {this.state.windowWidth}</p>
+        <p className="windowWidth">Window width: {this.props.window.windowWidth}</p>
         <input
           type="text"
           id="filled-basic"
@@ -49,5 +37,7 @@ class ClassComponent extends Component {
     );
   }
 }
+
+// ClassComponent = withWindowResize(ClassComponent);
 
 export default ClassComponent;
