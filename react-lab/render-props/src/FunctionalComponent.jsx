@@ -1,14 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import useWindowWidth from './hooks/useWindowWidth';
+import useDocTitle from './hooks/useDocTitle';
 
-const FunctionalComponent = ({ thisThing, thisOtherThing }) => {
-  const [guessInput, setGuessInput] = useState('');
+const FunctionalComponent = () => {
+  const [guessInput, setGuessInput] = useDocTitle();
   const windowWidth = useWindowWidth();
-
-  useEffect(() => {
-    console.log("document title update");
-    document.title = guessInput;
-  }, [guessInput]);
 
   const guessInputChangeHandler = (e) => {
     setGuessInput(e.target.value);

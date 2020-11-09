@@ -29,7 +29,7 @@ class WindowResize extends Component {
     return (
       <div>
         {/* STEP 9: render props */}
-        {this.props.render(this.state)}
+        {this.props.render({windowWidth: this.state.windowWidth})}
       </div>
     )
   }

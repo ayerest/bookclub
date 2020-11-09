@@ -37,7 +37,7 @@ class ClassComponent extends Component {
     return (
       <div className="component class">
         <h2>Class Component</h2>
-        <p>Window width: {this.state.windowWidth}</p>
+        <p className="windowWidth">Window width: {this.state.windowWidth}</p>
         <div className="inputInfo">
           <input
             type="text"
