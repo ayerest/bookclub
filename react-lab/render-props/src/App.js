@@ -2,7 +2,7 @@ import './App.css';
 import React, { useState } from 'react';
 import FunctionalComponent from "./FunctionalComponent";
 import ClassComponent from './ClassComponent';
-// import RenderProps from './RenderProps';
+// import ClassComponentContainer from './ClassComponentContainer';
 
 function App() {
   const [displayClassComponent, setDisplayClassComponent] = useState(true);

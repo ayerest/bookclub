@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ClassComponent from './ClassComponent2';
 import WindowResize from './WindowResize';
 
-class RenderProps extends Component {
+class ClassComponentContainer extends Component {
   render() {
     return (
       <>
@@ -12,4 +12,4 @@ class RenderProps extends Component {
   }
 }
 
-export default RenderProps;
+export default ClassComponentContainer;
