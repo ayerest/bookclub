@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import johnmalkovich from './images/johnmalkovich.jpg';
 
 class RealJohnMalkovich extends Component {
   name = 'John Malkovich'
@@ -13,6 +14,7 @@ class RealJohnMalkovich extends Component {
     return (
       <>
         <h2>Hi I'm John Malkovich!</h2>
+        <img className="person" src={johnmalkovich} alt="Still of John Cusack from the movie Being John Malkovich" />
       </>
     )
   }

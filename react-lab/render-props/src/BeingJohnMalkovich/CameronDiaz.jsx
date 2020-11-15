@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import camerondiaz from './camerondiaz.jpeg';
+import camerondiaz from './images/camerondiaz.jpg';
 
 class CameronDiaz extends Component {
   

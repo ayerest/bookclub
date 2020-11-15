@@ -1,29 +1,27 @@
 import './App.css';
 import React, { useState } from 'react';
 import FunctionalComponent from "./BeingJohnMalkovich/FunctionalComponent";
-import ClassComponent from './BeingJohnMalkovich/ClassComponent';
-// import ClassComponentContainer from './ClassComponentContainer';
+import JohnMalkovich from './BeingJohnMalkovich/JohnMalkovich';
 
 function App() {
-  const [displayClassComponent, setDisplayClassComponent] = useState(true);
+  const [displayRenderPropsExample, setDisplayRenderPropsExample] = useState(true);
 
   const toggleDisplay = () => {
-    setDisplayClassComponent((prevState => !prevState))
+    setDisplayRenderPropsExample((prevState => !prevState))
   }
   return (
     <div className="container">
       <div className="checkbox">
-        <p>Display Class Component</p>
+        <p>Display Render Props Example</p>
         <input 
           type="checkbox"
-          checked={displayClassComponent}
+          checked={displayRenderPropsExample}
           onChange={toggleDisplay}
         />
       </div>
       <div>
-        {/* {displayClassComponent && <RenderProps />} */}
-        {displayClassComponent && <ClassComponent />}
-        {!displayClassComponent && <FunctionalComponent />}
+        {displayRenderPropsExample && <JohnMalkovich />}
+        {!displayRenderPropsExample && <FunctionalComponent />}
       </div>
     </div>
   );

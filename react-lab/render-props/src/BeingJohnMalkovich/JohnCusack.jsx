@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import johncusack from './johncusack.jpg';
+import johncusack from './images/johncusack.jpg';
 
 class JohnCusack extends Component {
   name = 'John Cusack'
