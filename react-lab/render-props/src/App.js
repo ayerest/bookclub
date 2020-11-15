@@ -1,7 +1,7 @@
 import './App.css';
 import React, { useState } from 'react';
-import FunctionalComponent from "./FunctionalComponent";
-import ClassComponent from './ClassComponent';
+import FunctionalComponent from "./BeingJohnMalkovich/FunctionalComponent";
+import ClassComponent from './BeingJohnMalkovich/ClassComponent';
 // import ClassComponentContainer from './ClassComponentContainer';
 
 function App() {

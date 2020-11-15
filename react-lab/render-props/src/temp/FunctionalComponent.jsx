@@ -1,6 +1,6 @@
 import React from "react";
-import useWindowWidth from './hooks/useWindowWidth';
-import useDocTitle from './hooks/useDocTitle';
+import useWindowWidth from '../hooks/useWindowWidth';
+import useDocTitle from '../hooks/useDocTitle';
 
 const FunctionalComponent = () => {
   const [guessInput, setGuessInput] = useDocTitle();

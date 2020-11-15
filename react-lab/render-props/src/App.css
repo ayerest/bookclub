@@ -6,6 +6,16 @@ body {
   text-align: center;
 }
 
+.NewJersey {
+  height: 400px;
+  width: 400px;
+}
+
+.person {
+  height: 250px;
+  width: 400px;
+}
+
 .container {
   width: 80vw;
 }
