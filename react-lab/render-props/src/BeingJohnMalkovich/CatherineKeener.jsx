@@ -9,6 +9,9 @@ class CatherineKeener extends Component {
       this.props.malkovich.kickOut();
     }, 5000)
   }
+  componentWillUnmount = () => {
+    clearTimeout(this.timer);
+  }
   render() {
     return (
       <>

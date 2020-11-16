@@ -1,20 +1,17 @@
 import React, { useState } from 'react';
 import useMirror from './useMirror';
-import useMarionette from './useMarionettes';
-import useKickOut from './useKickOut';
+import useTunnel from './useTunnel';
 import CameronDiaz from '../CameronDiaz';
 import CatherineKeener from '../CatherineKeener';
 import JohnCusack from '../JohnCusack';
 import RealJohnMalkovich from '../RealJohnMalkovich';
 import johnjohn from '../images/johnjohn.jpg';
+import Tunnel from './Tunnel';
 
 const JohnMalk =  () => {
-  const [personSelected, setPersonSelected] = useState(false);
-  const mirror = useMirror();
-  const marionette = useMarionette();
-  const fickOut = useKickOut();
-  console.log(mirror);
-  console.log(fickOut);
+  const [personSelected, setPersonSelected] = useState('John Malkovich');
+  const [mirror, lookInTheMirror] = useMirror();
+  const [kickedOut, kickOut, inhabit] = useTunnel();
 
   const selectPerson = (e) => {
     setPersonSelected(e.target.value)
@@ -23,11 +20,11 @@ const JohnMalk =  () => {
   const personBeingJohnMalkovich = () => {
     switch(personSelected) {
       case 'John Cusack':
-        return <JohnCusack malkovich={"hi"}/>;
+        return <JohnCusack malkovich={{mirror, lookInTheMirror, kickedOut, kickOut, inhabit}}/>;
       case 'Cameron Diaz':
-        return <CameronDiaz malkovich={"hi"}/>;
+        return <CameronDiaz malkovich={{mirror, lookInTheMirror, kickedOut, kickOut, inhabit}}/>;
       case 'Catherine Keener':
-        return <CatherineKeener malkovich={"hi"}/>;
+        return <CatherineKeener malkovich={{mirror, lookInTheMirror, kickedOut, kickOut, inhabit}}/>;
       case 'John Malkovich':
         return <RealJohnMalkovich malkovich={"hi"}/>;        
       default:
@@ -49,6 +46,7 @@ const JohnMalk =  () => {
         <label htmlFor="person">...is being John Malkovich.</label>
       </div>
       {personSelected && personBeingJohnMalkovich()}
+      <Tunnel person={personSelected} lookInTheMirror={lookInTheMirror} kickedOut={kickedOut}/>
     </div>
   )
 }

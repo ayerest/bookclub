@@ -1,7 +1,13 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const useKickOut = () => {
+const useTunnel = () => {
   const [kickedOut, setKickedOut] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setKickedOut(true);
+    }, 2000)
+  }, [])
 
   const inhabit = () => {
     setKickedOut(false);
@@ -14,4 +20,4 @@ const useKickOut = () => {
   return [kickedOut, kickOut, inhabit];
 };
 
-export default useKickOut;
+export default useTunnel;
