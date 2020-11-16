@@ -14,6 +14,7 @@ body {
 .person {
   height: 220px;
   width: 400px;
+  margin-top: 1rem;
 }
 
 .container {
@@ -33,11 +34,11 @@ body {
 }
 
 .component.class {
-  background-color: thistle;
+  background-color: ghostwhite;
 }
 
 .component.functional {
-  background-color: lightblue;
+  background-color: ghostwhite;
 }
 
 input {

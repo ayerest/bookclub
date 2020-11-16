@@ -1,20 +1,22 @@
 import React, { Component } from 'react';
 import johncusack from './images/johncusack.jpg';
+import mirror from './images/mirror2.jpeg';
 
 class JohnCusack extends Component {
-  name = 'John Cusack'
-  // TODO: crawl through tunnel could be a render prop too...
-
-  crawlThroughTunnel = () => {
-    this.props.jm.controlJohnMalkovich('Raise hand', this.name);
+  componentDidMount() {
+    this.props.malkovich.inhabit();
+    this.timer = setTimeout(() => {
+      this.props.malkovich.kickOut();
+    }, 5000)
   }
-  
+
+  componentWillUnmount = () => {
+    clearTimeout(this.timer);
+  }
   render() {
-    console.log(this.props.jm);
     return (
-      <>
-        <h2>Hi I'm John Cusack!</h2>
-        <img className="person" src={johncusack} alt="Still of John Cusack from the movie Being John Malkovich" />
+      <>  
+        {!this.props.malkovich.kickedOut ? (this.props.malkovich.mirror ? <img className="person" src={mirror} alt="John Malkovich looks in the mirror." /> : <img className="person" src={johncusack} alt="Still of John Cusack from the movie Being John Malkovich" />) : null }
       </>
     )
   }

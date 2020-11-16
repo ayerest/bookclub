@@ -1,7 +1,7 @@
 import './App.css';
 import React, { useState } from 'react';
-import FunctionalComponent from "./BeingJohnMalkovich/FunctionalComponent";
-import JohnMalkovich from './BeingJohnMalkovich/JohnMalkovich';
+import JohnMalk from './BeingJohnMalkovich/hooks/JohnMalkovich';
+import JohnMalkovich from './BeingJohnMalkovich/render-props/JohnMalkovich';
 
 function App() {
   const [displayRenderPropsExample, setDisplayRenderPropsExample] = useState(true);
@@ -21,7 +21,7 @@ function App() {
       </div>
       <div>
         {displayRenderPropsExample && <JohnMalkovich />}
-        {!displayRenderPropsExample && <FunctionalComponent />}
+        {!displayRenderPropsExample && <JohnMalk />}
       </div>
     </div>
   );
