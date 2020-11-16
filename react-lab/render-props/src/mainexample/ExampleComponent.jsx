@@ -2,7 +2,7 @@ import React from "react";
 import useWindowWidth from '../hooks/useWindowWidth';
 import useDocTitle from '../hooks/useDocTitle';
 
-const FunctionalComponent = () => {
+const ExampleComponent = () => {
   const [guessInput, setGuessInput] = useDocTitle();
   const windowWidth = useWindowWidth();
 
@@ -12,7 +12,7 @@ const FunctionalComponent = () => {
 
   return (
     <div className="component functional">
-      <h2>Functional Component</h2>
+      <h2>Hooks Example</h2>
       <p className="windowWidth">Window width: {windowWidth}</p>
       <input
         type="text"
@@ -24,4 +24,4 @@ const FunctionalComponent = () => {
   );
 };
 
-export default FunctionalComponent;
+export default ExampleComponent;

@@ -9,7 +9,7 @@ import johnjohn from '../images/johnjohn.jpg';
 import Tunnel from './Tunnel';
 
 const JohnMalk =  () => {
-  const [personSelected, setPersonSelected] = useState('John Malkovich');
+  const [personSelected, setPersonSelected] = useState(false);
   const [mirror, lookInTheMirror] = useMirror();
   const [kickedOut, kickOut, inhabit] = useTunnel();
 
@@ -26,7 +26,7 @@ const JohnMalk =  () => {
       case 'Catherine Keener':
         return <CatherineKeener malkovich={{mirror, lookInTheMirror, kickedOut, kickOut, inhabit}}/>;
       case 'John Malkovich':
-        return <RealJohnMalkovich malkovich={"hi"}/>;        
+        return <RealJohnMalkovich malkovich={{mirror, lookInTheMirror, kickedOut, kickOut, inhabit}}/>;        
       default:
         return <img className="person" src={johnjohn} alt="Still of many John Malkovich's from the movie Being John Malkovich" />;
     }

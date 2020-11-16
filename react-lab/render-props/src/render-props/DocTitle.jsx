@@ -14,7 +14,7 @@ class DocTitle extends Component {
   }
 
   componentDidUpdate() {
-    console.log("DoctTitle did update");
+    // console.log("DoctTitle did update");
     document.title = this.state.guessInput;
   }
 

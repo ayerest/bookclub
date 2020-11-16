@@ -17,6 +17,10 @@ class WindowResize extends Component {
     window.addEventListener('resize', this.handleResize);
   }
 
+  // componentDidUpdate() {
+  //   console.log("window resize did update")
+  // }
+
   componentWillUnmount() {
     console.log("window resize will unmount");
     window.removeEventListener('resize', this.handleResize);

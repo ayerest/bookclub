@@ -14,6 +14,14 @@ class JohnMalkovich extends Component {
     }
   }
 
+  componentDidMount() {
+    console.log("John Malkovich Component did mount");
+  }
+
+  componentDidUpdate() {
+    console.log("John Malkovich component did update");
+  }
+
   selectPerson = (e) => {
     this.setState({personSelected: e.target.value})
   }

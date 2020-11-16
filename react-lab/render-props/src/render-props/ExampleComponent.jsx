@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 
-class ClassComponent extends Component {
+class ExampleComponent extends Component {
   render() {
     return (
       <div className="component class">
-        <h2>Class Component</h2>
+        <h2>Render Props Example</h2>
         <p className="windowWidth">Window width: {this.props.windowResize.windowWidth}</p>
         <input
           type="text"
@@ -17,4 +17,4 @@ class ClassComponent extends Component {
   }
 }
 
-export default ClassComponent;
+export default ExampleComponent;

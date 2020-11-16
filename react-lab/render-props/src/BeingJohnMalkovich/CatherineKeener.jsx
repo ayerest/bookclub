@@ -15,7 +15,8 @@ class CatherineKeener extends Component {
   render() {
     return (
       <>
-        <img className="person" src={catherinekeener} alt="Still of Catherine Keener in the movie Being John Malkovich"/>
+        {!this.props.malkovich.kickedOut && 
+        <img className="person" src={catherinekeener} alt="Still of Catherine Keener in the movie Being John Malkovich"/> }
       </>
     )
   }
